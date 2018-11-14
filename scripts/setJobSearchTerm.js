@@ -1,0 +1,1 @@
+postman.setEnvironmentVariable("search_text", "java");

@@ -1,0 +1,77 @@
+{
+    "variables": [],
+    "info": {
+        "name": "GithubCollection",
+        "_postman_id": "17a85ab2-969e-12a5-76d9-06629a6909aa",
+        "description": "",
+        "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "GetJobsFromGithub",
+            "event": [
+                {
+                    "listen": "test",
+                    "script": {
+                        "type": "text/javascript",
+                        "exec": [
+                            "var jsonData = JSON.parse(responseBody);",
+                            "postman.setEnvironmentVariable(\"first_job\", jsonData[0].id);"
+                        ]
+                    }
+                },
+                {
+                    "listen": "prerequest",
+                    "script": {
+                        "type": "text/javascript",
+                        "exec": [
+                            "postman.setEnvironmentVariable(\"search_text\", \"java\");"
+                        ]
+                    }
+                }
+            ],
+            "request": {
+                "url": "http://jobs.github.com/positions.json?description={{search_text}}",
+                "method": "GET",
+                "header": [],
+                "body": {},
+                "description": ""
+            },
+            "response": []
+        },
+        {
+            "name": "GetJobByIdFromGithub",
+            "event": [
+                {
+                    "listen": "test",
+                    "script": {
+                        "type": "text/javascript",
+                        "exec": [
+                            "///PlaceHolder",
+                            "",
+                            ""
+                        ]
+                    }
+                },
+                {
+                    "listen": "prerequest",
+                    "script": {
+                        "type": "text/javascript",
+                        "exec": [
+                            "///PlaceHolder ",
+                            ""
+                        ]
+                    }
+                }
+            ],
+            "request": {
+                "url": "http://jobs.github.com/positions/{{first_job}}.json",
+                "method": "GET",
+                "header": [],
+                "body": {},
+                "description": ""
+            },
+            "response": []
+        }
+    ]
+}

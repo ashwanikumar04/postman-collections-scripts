@@ -1,0 +1,6 @@
+{
+    "GetJobsFromGithub": {
+        "prerequest": "scripts/setJobSearchTerm.js",
+        "test": "scripts/setFirstJobId.js"
+    }
+}

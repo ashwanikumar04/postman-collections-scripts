@@ -1,0 +1,27 @@
+{
+  "name": "postman-collections-scripts",
+  "version": "1.0.0",
+  "description": "This shows the usage to update segregate scripts from collections json and then merge them using gulp",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashwanikumar04/postman-collections-scripts.git"
+  },
+  "author": "Ashwani Kumar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ashwanikumar04/postman-collections-scripts/issues"
+  },
+  "homepage": "https://github.com/ashwanikumar04/postman-collections-scripts#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "fancy-log": "^1.3.2",
+    "yargs": "^6.6.0",
+    "gulp-postcol": "^1.0.1"
+  }
+}
